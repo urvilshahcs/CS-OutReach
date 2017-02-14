@@ -1,0 +1,78 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="CSOutreach.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title><%: Page.Title %> - CS Outreach - The University of Texas at Dallas</title>
+    <meta name="viewport" content="width=device-width" />
+
+    <script src="js/jquery-1.11.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/bootstrap-responsive.css" rel="stylesheet" />
+    <link href="css/cs-outreach.css" rel="stylesheet" />
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server" id="pageform">
+        <div id="wrap">
+            <div class="header">
+                <nav class="navbar navbar-default navbar-static-top navbar-csoutreach" role="navigation">
+                    <div class="banner">
+                        <div class="container banner-container">
+                            <a href="www.utdallas.edu"><img id="banner-logo" src="img/UT_Dallas_tex_rev.png" /></a>
+                            <div id="banner-title"><div class="banner-title-large"><strong>K-12 Outreach</strong></div><div class="banner-title-small">Erik Jonsson School of Engineering and Computer Science</div></div>
+                        </div>
+                    </div>
+                  <div class="container">
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle collapsed active" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                      <a class="navbar-brand" href="Default.aspx">K-12 Outreach</a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                      <ul class="nav navbar-nav">
+                        <li><a href="AboutUs.aspx">About Us</a></li>
+                        <%= getDynamicMenuContent() %>
+                        <li><a href="Contact.aspx">Contact Us</a></li>
+                      </ul>
+                      <ul class="nav navbar-nav navbar-right">
+                        <li class="csoutreach-loginbutton">
+                            <a href="#" id="login" runat="server" onserverclick="login_ServerClick"><span class="glyphicon glyphicon-user"></span> <%= getLoginButtonText() %></a>
+                        </li>
+                      </ul>
+                    </div><!--/.nav-collapse -->
+                  </div>
+                </nav>
+            </div>
+            <div class="container">
+                <asp:ContentPlaceHolder ID="BodyContent" runat="server">  
+                </asp:ContentPlaceHolder>
+            </div><!-- container -->
+            <div id="push"></div>
+        </div><!-- wrap -->
+    <div id="footer">
+        <div class="container">
+            <div class="col-sm-12 col-md-5 col2">
+				<span class='row1'></span>
+				<span class='row2'></span>
+                <span class='row3'>
+				    <a href='https://www.facebook.com/CSK12OutreachUTD' target="_blank"><i class="icon-facebook"></i> </a>								
+					<a href='https://www.twitter.com/' target="_blank"><i class="icon-twitter"></i></a>												
+					<a href='https://groups.google.com/d/msg/dfw-k12-stem-outreach/ogI-KBKYeXw/NB_aaSzQe7MJ' target="_blank"><i class="icon-googleplus"></i> </a>																											
+                </span>						
+			</div>
+        </div>
+    </div>
+    </form>
+    <asp:ContentPlaceHolder ID="PageScripts" runat="server"></asp:ContentPlaceHolder>
+</body>
+</html>
