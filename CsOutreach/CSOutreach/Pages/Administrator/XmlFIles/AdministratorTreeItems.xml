@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<root>
+  <Dashboard title ="Dashboard">
+  </Dashboard>
+  <Event title ="Event">
+  <CreateEvent title ="Creae Event">Create Event</CreateEvent>
+    <UpdateEvent title ="Update Event"/>
+  </Event>
+  <Instructors title ="Instructor">
+    <ReviewApplication title ="Review New Applicants"/>
+    <RemoveInstructor title ="Remove Instructor"/>
+    <LeaveAprooval title ="Review leave Applications"/>
+  </Instructors>
+  <Student title ="Students">
+    
+    <AddStudent title ="Add student to An Event"/>
+    <RemoveStudent title ="Remove student from Event"/>
+    
+  </Student>  
+
+</root>

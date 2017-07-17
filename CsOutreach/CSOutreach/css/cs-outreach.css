@@ -1,0 +1,337 @@
+﻿/* Additional Styling on Top of Bootstrap */
+
+h1, h2, h3, h4, h5, h6 {
+    color: #008542;
+}
+
+.content {
+    min-height: 90%;
+}
+
+.banner {
+    background-color: #E16F06;
+    color: white;
+}
+
+.banner-container {
+    position: relative;
+}
+
+#banner-logo {
+    width: 300px;
+    left: 0px;
+    padding: 10px;
+}
+
+#banner-title {
+    color: white;
+    clear: both;
+    text-align: right;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    padding: 10px;
+}
+
+.banner-title-large {
+    font-size: x-large;
+}
+
+.banner-title-small {
+    font-size: large;
+}
+
+.navbar-csoutreach {
+    position: relative;
+    background-color: #FCA811;
+    color: white;
+    -webkit-box-shadow: 0px 1px 5px 0px rgba(160, 160, 160, 0.5);
+    -moz-box-shadow: 0px 1px 5px 0px rgba(160, 160, 160, 0.5);
+    box-shadow: 0px 1px 5px 0px rgba(160, 160, 160, 0.5);
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: white;
+}
+
+.navbar-default .navbar-brand {
+    color: white;
+    font-weight: bold;
+}
+
+.carousel-cs-outreach {
+    max-height: 500px;
+}
+
+.carousel-caption {
+    background-color: black;
+    opacity: .7;
+}
+
+.carousel-control {
+    color: orange;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+
+html, body {
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    /* The html and body elements cannot have any padding or margin. */
+}
+
+/* The top-level asp form must also be height: 100% or else the sticky footer does not work */
+#pageform {
+    height: 100%;
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    /* Negative indent footer by it's height */
+    margin: 0 auto -75px;
+}
+
+/* Set the fixed height of the footer here */
+#push,
+#footer {
+    height: 75px;
+}
+
+#footer {
+    width: 100%;
+    background-color: #E16F06;
+    color: white;
+}
+
+.csoutreach-logindropdown {
+    padding: 20px;
+    min-width: 320px;
+    color: #158FD6;
+}
+
+.has-error {
+    color: #a94442;
+}
+
+/*Styling for tree navigation*/
+
+
+.tree {
+    margin-left: -70px;
+    border-right: 1px solid;
+    height: 100%;
+}
+
+.treeParent {
+    color: #008542;
+}
+
+.treeNodeSelected {
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    background-color: #008542;
+    border-radius: 10px;
+}
+
+.treeParent a:hover {
+    color: #008542;
+    background-color: #F2FCF7;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px;
+    font-size: 12px;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 10px;
+}
+
+.contentDiv {
+    padding-left: 35px;
+}
+
+/*CSS Styles for About Us Page*/
+.missionHdr {
+    margin-bottom: 58px;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto 30px;
+}
+
+.thumbnail {
+    background-color: transparent;
+    border: 0;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 15px;
+    margin-bottom: 35px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    margin-left: 10px;
+    min-height: 300px;
+}
+
+/*Css for tree navigation*/
+.treeStruct {
+    margin-left: -100px;
+}
+
+.treeBorderRight {
+    border-right: 1px solid #ddd;
+    margin-right: 0;
+    height: 100%;
+}
+
+.contentBorderLeft {
+    border-left: 1px solid #ddd;
+    margin-left: -1px;
+    height: 100%;
+}
+
+.nav {
+    position: relative;
+    display: block;
+}
+
+    .nav > a {
+        position: relative;
+        display: block;
+        padding: 10px 15px;
+    }
+
+        .nav > a:hover,
+        .nav > a:focus {
+            text-decoration: none;
+            background-color: #eee;
+        }
+
+.nav-pills > a {
+    float: left;
+}
+
+.nav-pills > a {
+    border-radius: 4px;
+}
+
+    .nav-pills > a + a {
+        margin-left: 2px;
+    }
+
+.nav-pills.active > a,
+.nav-pills.active > a :hover,
+.nav-pills.active > a :focus {
+    color: #fff;
+    background-color: #008542;
+}
+
+.containerPortal {
+    padding: 18px 24px;
+    min-width: 600px;
+    margin: 0;
+    color: #444;
+}
+
+
+#registeredEvents, #UpComingEvents, #EventSchedule, #Announcements {
+    margin: 6px 0px 0px 0px;
+    min-height: 200px;
+    height: auto;
+    float: left;
+}
+
+.module {
+    border: 1px solid #D5D2CA;
+    background-color: #EFEDE3;
+    border-radius: 3px;
+    position: relative;
+    margin: 10px 20px 10px 0px;
+    min-width: 400px;
+}
+
+    .module h5 {
+        border-bottom: 1px solid #D5D2CA;
+        padding: 8px 8px 8px 12px;
+        font-weight: bold;
+    }
+
+.moduleBody {
+    padding: 8px 8px 8px 12px;
+}
+
+    .moduleBody a {
+        font-weight: bold;
+        color: #008542;
+        text-decoration: none;
+    }
+
+.ulEvent {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+    .ulEvent li {
+        /*padding: 7px 0 0 0;*/
+        margin: 0 0 7px 0;
+    }
+
+    .ulEvent div {
+        text-indent: -16px;
+        margin: 4px 0;
+        padding: 0 0 0 16px;
+    }
+
+.disblock {
+    display: block;
+}
+
+
+#conflictsBlock, #prereqBlock {
+    margin: 6px 0px 0px 0px;
+    min-height: 200px;
+    height: auto;
+    float: left;
+}
+
+.thumbnail:hover {
+    background-color: #FCA811;
+}
+
+
+.thumbnail .circle {
+    border-radius: 50%;
+    background-color: #f7f7f7;
+    width: 155px;
+    height: 155px;
+    margin: 0 auto;
+}
+
+.thumbnail:hover h3 a {
+    color: #000;
+    text-decoration: none;
+}
+
+.error_vld {
+    border: solid 1px #a94442;
+}
+
+.modulesubcontent {
+    color: #9f9797;
+    font-style: italic;
+}
