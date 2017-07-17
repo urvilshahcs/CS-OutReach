@@ -1,0 +1,51 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Pages/MasterPages/Site.Master" AutoEventWireup="true" CodeBehind="AdministratorMasterpage.master.cs" Inherits="CSOutreach.Pages.MasterPages.AdministratorMasterpage" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
+ <asp:ContentPlaceHolder ID="HeaderContent" runat="server">
+</asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="BodyContent" runat="server">
+    
+   <div class="treeStruct">
+        <div class="col-md-12">
+            <div class="treeBorderRight col-md-3">
+
+                <asp:TreeView ID="TreeView1" runat="server" Width="175px" HoverNodeStyle-CssClass= "nav nav-pills" NodeStyle-CssClass="nav nav-pills" SelectedNodeStyle-CssClass="nav nav-pills active" LeafNodeStyle-CssClass="nav nav-pills">
+                    
+                    <Nodes>
+                        
+                        <asp:TreeNode Text="Dashboard" NavigateUrl="~/Pages/Administrator/Dashboard.aspx">
+                        </asp:TreeNode>
+
+                        <asp:TreeNode Text="Event">
+                            <asp:TreeNode  Text="Create Event" NavigateUrl="~/Pages/Administrator/CreateEvent.aspx" />
+                            <asp:TreeNode  Text="Update Event" NavigateUrl="~/Pages/Administrator/UpdateEvent.aspx" />
+                        
+                        </asp:TreeNode>
+                        <asp:TreeNode Text="Instructor">
+                            <asp:TreeNode  Text="Review Applicants" NavigateUrl="~/Pages/Administrator/ReviewApplicants.aspx" />
+                            <asp:TreeNode  Text="Manage Instructors" NavigateUrl="~/Pages/Administrator/ManageInstructors.aspx" />
+                            <asp:TreeNode  Text="Leave Approval" NavigateUrl="~/Pages/Administrator/ApproveLeave.aspx" />
+                        </asp:TreeNode>
+                         <asp:TreeNode Text="Student">
+                            <asp:TreeNode  Text="Manage Student" NavigateUrl="~/Pages/Administrator/ManageStudent.aspx" />
+                            
+                        
+                        </asp:TreeNode>
+                    </Nodes>
+                </asp:TreeView>
+
+                
+            </div>
+            <div class=" contentBorderLeft col-md-9 contentDiv" >
+                <asp:ContentPlaceHolder ID="AdminContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+       </div>
+
+    </div>
+    
+   
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="PageScripts" runat="server">
+</asp:Content>

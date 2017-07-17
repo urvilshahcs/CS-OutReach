@@ -1,0 +1,167 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="CSOutreach.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title><%: Page.Title %> - CS Outreach - The University of Texas at Dallas</title>
+    <meta name="viewport" content="width=device-width" />
+
+    <script src="../../js/jquery-1.11.1.js"></script>
+    <script src="../../js/jquery.validate.js"></script>
+    <script src="../../js/bootstrap.js"></script>
+    <script src="../../js/jquery.dataTables.min.js"></script>
+    <script src="../../js/dataTables.bootstrap.js"></script>
+
+    <link href="../../css/bootstrap.css" rel="stylesheet" />
+    <link href="../../css/bootstrap-responsive.css" rel="stylesheet" />
+    <link href="../../css/cs-outreach.css" rel="stylesheet" />
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    
+<form runat="server" id="pageform">
+        <!-- for update panel usage -->
+        <asp:ScriptManager ID="ScriptManager" runat="server" />
+    <div id="wrap">
+        <div class="header">
+            <nav class="navbar navbar-default navbar-static-top navbar-csoutreach" role="navigation">
+                <div class="banner">
+                    <div class="container banner-container">
+                        <a href="www.utdallas.edu"><img id="banner-logo" src="../../img/UT_Dallas_tex_rev.png" /></a>
+                        <div id="banner-title"><div class="banner-title-large"><strong>K-12 Outreach</strong></div><div class="banner-title-small">Erik Jonsson School of Engineering and Computer Science</div></div>
+                    </div>
+                </div>
+              <div class="container">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed active" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="Default.aspx">K-12 Outreach</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                  <ul class="nav navbar-nav">
+                    <li><a href="AboutUs.aspx">About Us</a></li>
+                    <%= getDynamicMenuContent() %>
+                    <li><a href="Contact.aspx">Contact Us</a></li>
+                  </ul>
+                  <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown csoutreach-loginbutton">
+                        <% if (!LoggedIn){ %>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="login" runat="server"><span class="glyphicon glyphicon-user"></span> Log In</a>
+                            <div class="dropdown-menu csoutreach-logindropdown" role="menu">
+                                <asp:UpdatePanel ID="LoginDropdownUpdatePanel" UpdateMode="Always" runat="server">
+                                    <ContentTemplate>
+                                        <div class="stop-clicks">
+                                            <% if (!UsernameError){ %>
+                                                <div class="form-group">
+                                            <% } else { %>
+                                                <div class="form-group has-error">
+                                            <%} %>
+                                                <label for="<%= inputUsername.ClientID %>">Email: </label>
+                                                    <input type="text" class="form-control stop-clicks" id="inputUsername" runat="server" name="email" />
+                                            </div>
+                                                <% if (!PasswordError){ %>
+                                                    <div class="form-group">
+                                                <% } else { %>
+                                                    <div class="form-group has-error">
+                                                <%} %>
+                                                <label for="<%= inputPassword.ClientID %>">Password: </label>
+                                                    <input type="password" class="form-control stop-clicks" id="inputPassword" runat="server" name="password" />
+                                            </div>
+                                            <div class="form-group">
+                                                <div id="LoginFormErrorMessage" class="has-error" runat="server"></div>
+                                                <div id="LoginFormStatusMessage" class="has-feedback" runat="server"></div>
+                                            </div>
+                                        </div>
+                                        <input type="submit" class="btn btn-primary center-block" id="loginButton" value="Log In" />
+                                        <asp:Button ID="InvisibleLoginButton" runat="server" style="display: none" OnClick="login_ServerClick" />
+                                        <hr />
+                                        <div class="text-center">
+                                            <a href="<%= ResolveClientUrl("~/Pages/Common/AccountRecovery.aspx") %>">Forgot Password?</a> |
+                                            <a href="<%= ResolveClientUrl("~/Pages/Common/Signup.aspx") %>">Create Account</a>
+                                        </div>
+                                    </ContentTemplate>
+                                </asp:UpdatePanel>
+                            </div>
+                        <% } else {  %>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="A1" runat="server"><span class="glyphicon glyphicon-user"></span> <%= Username %></a>
+                            <div class="dropdown-menu csoutreach-logindropdown" role="menu">
+                            <div class="dropdown-ignore-click-zone">
+                                <div class="center-block text-center">
+                                    <h4><a href="<%= ResolveClientUrl("~/Pages/Common/Profile.aspx") %>">View User Profile</a></h4>
+                                    </div>
+                                    <hr />
+                                    <input type="submit" class="btn btn-danger center-block" id="logoutButton" runat="server" onserverclick="logoutButton_ServerClick" value="Log Out"/>
+                                </div>
+                        </div>
+                        <% } %>
+                    </li>
+                  </ul>
+                </div><!--/.nav-collapse -->
+              </div>
+            </nav>
+        </div>
+        <div class="container">
+            <!-- Page message divs -->
+            <div id="ErrorMessage" runat="server" class="alert alert-danger" role="alert" visible="false">
+            </div>
+            <div id="WarningMessage" runat="server" class="alert alert-warning" role="alert" visible="false">
+            </div>
+            <div id="InfoMessage" runat="server" class="alert alert-info" role="alert" visible="false">
+            </div>
+            <div id="SuccessMessage" runat="server" class="alert alert-success" role="alert" visible="false">
+            </div>
+            <asp:ContentPlaceHolder ID="BodyContent" runat="server">  
+            </asp:ContentPlaceHolder>
+        </div><!-- container -->
+        <div id="push"></div>
+    </div><!-- wrap -->
+    <div id="footer">
+        <div class="container">
+            <div class="col-sm-12 col-md-5 col2">
+				<span class='row1'></span>
+				<span class='row2'></span>
+                <span class='row3'>
+				    <a href='https://www.facebook.com/CSK12OutreachUTD' target="_blank"><i class="icon-facebook"></i> </a>								
+					<a href='https://www.twitter.com/' target="_blank"><i class="icon-twitter"></i></a>												
+					<a href='https://groups.google.com/d/msg/dfw-k12-stem-outreach/ogI-KBKYeXw/NB_aaSzQe7MJ' target="_blank"><i class="icon-googleplus"></i> </a>																											
+                </span>						
+			</div>
+        </div>
+    </div>
+    </form>
+    <script>
+        function registerPanelClickEvents() {
+            console.log("registering panel click events");
+            $(".stop-clicks").click(function (event) {
+                // Prevent Bootstrap.js from hiding dropdown when user clicks on elements in the dropdown.
+                event.preventDefault();
+                event.stopPropagation();
+            });
+
+            $("#loginButton").click(function (event) {
+                event.preventDefault();
+                event.stopPropagation();
+
+                $("#<%= InvisibleLoginButton.ClientID %>").click();
+                $("#<%= LoginFormStatusMessage.ClientID %>").html("Logging in...");
+                $("#login").attr("aria-expanded", true);
+                $(".csoutreach-loginbutton").addClass("open");
+            });
+        }
+        $(document).ready(function () { 
+            registerPanelClickEvents();
+        });
+        // After login update panel updates, the already registered events for PanelClicks will no longer be valid
+        // The line below re-registers them to preserve the dropdown panel's behavior after async postback.
+       Sys.WebForms.PageRequestManager.getInstance().add_endRequest(registerPanelClickEvents);
+    </script>
+    <asp:ContentPlaceHolder ID="PageScripts" runat="server"></asp:ContentPlaceHolder>
+</body>
+</html>
