@@ -1,0 +1,11 @@
+C:\Users\urvilshah.BAHFEDCORP\Downloads\WPLCSOutreach-master\WPLCSOutreach-master\CSOutreach\StudentEntity\bin\Debug\StudentEntity.dll
+C:\Users\urvilshah.BAHFEDCORP\Downloads\WPLCSOutreach-master\WPLCSOutreach-master\CSOutreach\StudentEntity\bin\Debug\StudentEntity.pdb
+C:\Users\urvilshah.BAHFEDCORP\Downloads\WPLCSOutreach-master\WPLCSOutreach-master\CSOutreach\StudentEntity\bin\Debug\DataOperations.dll
+C:\Users\urvilshah.BAHFEDCORP\Downloads\WPLCSOutreach-master\WPLCSOutreach-master\CSOutreach\StudentEntity\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Users\urvilshah.BAHFEDCORP\Downloads\WPLCSOutreach-master\WPLCSOutreach-master\CSOutreach\StudentEntity\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Users\urvilshah.BAHFEDCORP\Downloads\WPLCSOutreach-master\WPLCSOutreach-master\CSOutreach\StudentEntity\bin\Debug\DataOperations.pdb
+C:\Users\urvilshah.BAHFEDCORP\Downloads\WPLCSOutreach-master\WPLCSOutreach-master\CSOutreach\StudentEntity\obj\Debug\StudentEntity.csprojResolveAssemblyReference.cache
+C:\Users\urvilshah.BAHFEDCORP\Downloads\WPLCSOutreach-master\WPLCSOutreach-master\CSOutreach\StudentEntity\obj\Debug\StudentEntity.PageTraversal.PageInfo.resources
+C:\Users\urvilshah.BAHFEDCORP\Downloads\WPLCSOutreach-master\WPLCSOutreach-master\CSOutreach\StudentEntity\obj\Debug\StudentEntity.csproj.GenerateResource.Cache
+C:\Users\urvilshah.BAHFEDCORP\Downloads\WPLCSOutreach-master\WPLCSOutreach-master\CSOutreach\StudentEntity\obj\Debug\StudentEntity.dll
+C:\Users\urvilshah.BAHFEDCORP\Downloads\WPLCSOutreach-master\WPLCSOutreach-master\CSOutreach\StudentEntity\obj\Debug\StudentEntity.pdb
