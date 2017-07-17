@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a567c8b0399d484ba1741c178e5e2a6f" Name="Diagram1">
+        <EntityTypeShape EntityType="UTDallasCSOutreachModel.Academic" Width="1.5" PointX="3.75" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UTDallasCSOutreachModel.Course" Width="1.5" PointX="0.75" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="UTDallasCSOutreachModel.Event" Width="1.5" PointX="3" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="UTDallasCSOutreachModel.EventInstructor" Width="1.5" PointX="11.25" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="UTDallasCSOutreachModel.EventType" Width="1.5" PointX="0.75" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="UTDallasCSOutreachModel.ExtraWork" Width="1.5" PointX="8.25" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="UTDallasCSOutreachModel.Instructor" Width="1.5" PointX="6" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="UTDallasCSOutreachModel.Person" Width="1.5" PointX="0.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="UTDallasCSOutreachModel.SkillSet" Width="1.5" PointX="8.25" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="UTDallasCSOutreachModel.Student" Width="1.5" PointX="3" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="UTDallasCSOutreachModel.StudentEvent" Width="1.5" PointX="5.25" PointY="12.875" IsExpanded="true" />
+        <AssociationConnector Association="UTDallasCSOutreachModel.fk_CourseIdEvent" ManuallyRouted="false" />
+        <AssociationConnector Association="UTDallasCSOutreachModel.fk_CreatedByEvent" ManuallyRouted="false" />
+        <AssociationConnector Association="UTDallasCSOutreachModel.fk_EventIdEventInstructor" ManuallyRouted="false" />
+        <AssociationConnector Association="UTDallasCSOutreachModel.fk_EventIdStudentEvent" ManuallyRouted="false" />
+        <AssociationConnector Association="UTDallasCSOutreachModel.fk_EventTypeIdEvent" ManuallyRouted="false" />
+        <AssociationConnector Association="UTDallasCSOutreachModel.fk_UpdatedByEvent" ManuallyRouted="false" />
+        <AssociationConnector Association="UTDallasCSOutreachModel.fk_InstructorIdEventInstructor" ManuallyRouted="false" />
+        <AssociationConnector Association="UTDallasCSOutreachModel.fk_InstructorIdExtraWork" ManuallyRouted="false" />
+        <AssociationConnector Association="UTDallasCSOutreachModel.fk_PersonIdInstructor" ManuallyRouted="false" />
+        <AssociationConnector Association="UTDallasCSOutreachModel.fk_PersonIdStudent" ManuallyRouted="false" />
+        <AssociationConnector Association="UTDallasCSOutreachModel.fk_StudentIdStudentEvent" ManuallyRouted="false" />
+        <AssociationConnector Association="UTDallasCSOutreachModel.InstructorAcademics" ManuallyRouted="false" />
+        <AssociationConnector Association="UTDallasCSOutreachModel.InstructorCourse" ManuallyRouted="false" />
+        <AssociationConnector Association="UTDallasCSOutreachModel.InstructorSkill" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

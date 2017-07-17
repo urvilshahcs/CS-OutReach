@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="UTDallasCSOutreachModelStoreContainer" CdmEntityContainer="DBCSEntities">
+    <EntitySetMapping Name="Academics">
+      <EntityTypeMapping TypeName="UTDallasCSOutreachModel.Academic">
+        <MappingFragment StoreEntitySet="Academics">
+          <ScalarProperty Name="AcademicsId" ColumnName="AcademicsId" />
+          <ScalarProperty Name="DayOfWeek" ColumnName="DayOfWeek" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Courses">
+      <EntityTypeMapping TypeName="UTDallasCSOutreachModel.Course">
+        <MappingFragment StoreEntitySet="Course">
+          <ScalarProperty Name="AgeGroup" ColumnName="AgeGroup" />
+          <ScalarProperty Name="CourseId" ColumnName="CourseId" />
+          <ScalarProperty Name="CourseLevel" ColumnName="CourseLevel" />
+          <ScalarProperty Name="CourseName" ColumnName="CourseName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Events">
+      <EntityTypeMapping TypeName="UTDallasCSOutreachModel.Event">
+        <MappingFragment StoreEntitySet="Event">
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="EventId" ColumnName="EventId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="EventTypeId" ColumnName="EventTypeId" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="CourseId" ColumnName="CourseId" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EventInstructors">
+      <EntityTypeMapping TypeName="UTDallasCSOutreachModel.EventInstructor">
+        <MappingFragment StoreEntitySet="EventInstructor">
+          <ScalarProperty Name="LeaveApplied" ColumnName="LeaveApplied" />
+          <ScalarProperty Name="EventInstructorId" ColumnName="EventInstructorId" />
+          <ScalarProperty Name="EventId" ColumnName="EventId" />
+          <ScalarProperty Name="InstructorId" ColumnName="InstructorId" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="ACCEPTED" ColumnName="ACCEPTED" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EventTypes">
+      <EntityTypeMapping TypeName="UTDallasCSOutreachModel.EventType">
+        <MappingFragment StoreEntitySet="EventType">
+          <ScalarProperty Name="EventTypeId" ColumnName="EventTypeId" />
+          <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+          <ScalarProperty Name="Recurrence" ColumnName="Recurrence" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExtraWorks">
+      <EntityTypeMapping TypeName="UTDallasCSOutreachModel.ExtraWork">
+        <MappingFragment StoreEntitySet="ExtraWork">
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="ExtraWorkId" ColumnName="ExtraWorkId" />
+          <ScalarProperty Name="InstructorId" ColumnName="InstructorId" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Miles" ColumnName="Miles" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Instructors">
+      <EntityTypeMapping TypeName="UTDallasCSOutreachModel.Instructor">
+        <MappingFragment StoreEntitySet="Instructor">
+          <ScalarProperty Name="hasCar" ColumnName="hasCar" />
+          <ScalarProperty Name="JoinedUtd" ColumnName="JoinedUtd" />
+          <ScalarProperty Name="InstructorId" ColumnName="InstructorId" />
+          <ScalarProperty Name="canTeach" ColumnName="canTeach" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="People">
+      <EntityTypeMapping TypeName="UTDallasCSOutreachModel.Person">
+        <MappingFragment StoreEntitySet="Person">
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="IsLocked" ColumnName="IsLocked" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SkillSets">
+      <EntityTypeMapping TypeName="UTDallasCSOutreachModel.SkillSet">
+        <MappingFragment StoreEntitySet="SkillSet">
+          <ScalarProperty Name="SkillSetId" ColumnName="SkillSetId" />
+          <ScalarProperty Name="SkillName" ColumnName="SkillName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Students">
+      <EntityTypeMapping TypeName="UTDallasCSOutreachModel.Student">
+        <MappingFragment StoreEntitySet="Student">
+          <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+          <ScalarProperty Name="EmergencyName" ColumnName="EmergencyName" />
+          <ScalarProperty Name="EmergencyNumber" ColumnName="EmergencyNumber" />
+          <ScalarProperty Name="EmergencyRelation" ColumnName="EmergencyRelation" />
+          <ScalarProperty Name="IsPaperWorkComplete" ColumnName="IsPaperWorkComplete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StudentEvents">
+      <EntityTypeMapping TypeName="UTDallasCSOutreachModel.StudentEvent">
+        <MappingFragment StoreEntitySet="StudentEvent">
+          <ScalarProperty Name="StudentEventId" ColumnName="StudentEventId" />
+          <ScalarProperty Name="RegistrationDate" ColumnName="RegistrationDate" />
+          <ScalarProperty Name="EventId" ColumnName="EventId" />
+          <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="InstructorAcademics" TypeName="UTDallasCSOutreachModel.InstructorAcademics" StoreEntitySet="InstructorAcademics">
+      <EndProperty Name="Academics">
+        <ScalarProperty Name="AcademicsId" ColumnName="AcademicsId" />
+      </EndProperty>
+      <EndProperty Name="Instructor">
+        <ScalarProperty Name="InstructorId" ColumnName="InstructorId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="InstructorCourse" TypeName="UTDallasCSOutreachModel.InstructorCourse" StoreEntitySet="InstructorCourse">
+      <EndProperty Name="Course">
+        <ScalarProperty Name="CourseId" ColumnName="CourseId" />
+      </EndProperty>
+      <EndProperty Name="Instructor">
+        <ScalarProperty Name="InstructorId" ColumnName="InstructorId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="InstructorSkill" TypeName="UTDallasCSOutreachModel.InstructorSkill" StoreEntitySet="InstructorSkill">
+      <EndProperty Name="Instructor">
+        <ScalarProperty Name="InstructorId" ColumnName="InstructorId" />
+      </EndProperty>
+      <EndProperty Name="SkillSet">
+        <ScalarProperty Name="SkillSetId" ColumnName="SkillSetId" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

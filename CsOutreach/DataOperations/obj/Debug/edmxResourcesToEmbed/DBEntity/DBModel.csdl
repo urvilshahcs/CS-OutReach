@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="UTDallasCSOutreachModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Academic">
+    <Key>
+      <PropertyRef Name="AcademicsId" />
+    </Key>
+    <Property Name="AcademicsId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DayOfWeek" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="StartTime" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="EndTime" Type="Time" Nullable="false" Precision="7" />
+    <NavigationProperty Name="Instructors" Relationship="Self.InstructorAcademics" FromRole="Academics" ToRole="Instructor" />
+  </EntityType>
+  <EntityType Name="Course">
+    <Key>
+      <PropertyRef Name="CourseId" />
+    </Key>
+    <Property Name="CourseId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CourseLevel" Type="Int32" Nullable="false" />
+    <Property Name="CourseName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Events" Relationship="Self.fk_CourseIdEvent" FromRole="Course" ToRole="Event" />
+    <NavigationProperty Name="Instructors" Relationship="Self.InstructorCourse" FromRole="Course" ToRole="Instructor" />
+    <Property Name="AgeGroup" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Event">
+    <Key>
+      <PropertyRef Name="EventId" />
+    </Key>
+    <Property Name="EventId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EventTypeId" Type="Int32" Nullable="false" />
+    <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="StartTime" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="EndDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="EndTime" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="CourseId" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="0" />
+    <Property Name="UpdatedBy" Type="Int32" />
+    <NavigationProperty Name="Course" Relationship="Self.fk_CourseIdEvent" FromRole="Event" ToRole="Course" />
+    <NavigationProperty Name="Person" Relationship="Self.fk_CreatedByEvent" FromRole="Event" ToRole="Person" />
+    <NavigationProperty Name="EventInstructors" Relationship="Self.fk_EventIdEventInstructor" FromRole="Event" ToRole="EventInstructor" />
+    <NavigationProperty Name="StudentEvents" Relationship="Self.fk_EventIdStudentEvent" FromRole="Event" ToRole="StudentEvent" />
+    <NavigationProperty Name="EventType" Relationship="Self.fk_EventTypeIdEvent" FromRole="Event" ToRole="EventType" />
+    <NavigationProperty Name="Person1" Relationship="Self.fk_UpdatedByEvent" FromRole="Event" ToRole="Person" />
+    <Property Name="Location" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="EventInstructor">
+    <Key>
+      <PropertyRef Name="EventInstructorId" />
+    </Key>
+    <Property Name="EventInstructorId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EventId" Type="Int32" Nullable="false" />
+    <Property Name="InstructorId" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="ACCEPTED" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Event" Relationship="Self.fk_EventIdEventInstructor" FromRole="EventInstructor" ToRole="Event" />
+    <NavigationProperty Name="Instructor" Relationship="Self.fk_InstructorIdEventInstructor" FromRole="EventInstructor" ToRole="Instructor" />
+    <Property Name="LeaveApplied" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EventType">
+    <Key>
+      <PropertyRef Name="EventTypeId" />
+    </Key>
+    <Property Name="EventTypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Recurrence" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Events" Relationship="Self.fk_EventTypeIdEvent" FromRole="EventType" ToRole="Event" />
+  </EntityType>
+  <EntityType Name="ExtraWork">
+    <Key>
+      <PropertyRef Name="ExtraWorkId" />
+    </Key>
+    <Property Name="ExtraWorkId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InstructorId" Type="Int32" Nullable="false" />
+    <Property Name="StartTime" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="EndTime" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Miles" Type="Int32" />
+    <Property Name="Comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Instructor" Relationship="Self.fk_InstructorIdExtraWork" FromRole="ExtraWork" ToRole="Instructor" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="Instructor">
+    <Key>
+      <PropertyRef Name="InstructorId" />
+    </Key>
+    <Property Name="InstructorId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="canTeach" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="EventInstructors" Relationship="Self.fk_InstructorIdEventInstructor" FromRole="Instructor" ToRole="EventInstructor" />
+    <NavigationProperty Name="ExtraWorks" Relationship="Self.fk_InstructorIdExtraWork" FromRole="Instructor" ToRole="ExtraWork" />
+    <NavigationProperty Name="Person" Relationship="Self.fk_PersonIdInstructor" FromRole="Instructor" ToRole="Person" />
+    <NavigationProperty Name="Academics" Relationship="Self.InstructorAcademics" FromRole="Instructor" ToRole="Academics" />
+    <NavigationProperty Name="Courses" Relationship="Self.InstructorCourse" FromRole="Instructor" ToRole="Course" />
+    <NavigationProperty Name="SkillSets" Relationship="Self.InstructorSkill" FromRole="Instructor" ToRole="SkillSet" />
+    <Property Name="JoinedUtd" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="hasCar" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Person">
+    <Key>
+      <PropertyRef Name="PersonId" />
+    </Key>
+    <Property Name="PersonId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ContactNumber" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Role" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IsLocked" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Events" Relationship="Self.fk_CreatedByEvent" FromRole="Person" ToRole="Event" />
+    <NavigationProperty Name="Events1" Relationship="Self.fk_UpdatedByEvent" FromRole="Person" ToRole="Event" />
+    <NavigationProperty Name="Instructor" Relationship="Self.fk_PersonIdInstructor" FromRole="Person" ToRole="Instructor" />
+    <NavigationProperty Name="Student" Relationship="Self.fk_PersonIdStudent" FromRole="Person" ToRole="Student" />
+  </EntityType>
+  <EntityType Name="SkillSet">
+    <Key>
+      <PropertyRef Name="SkillSetId" />
+    </Key>
+    <Property Name="SkillSetId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SkillName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Instructors" Relationship="Self.InstructorSkill" FromRole="SkillSet" ToRole="Instructor" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="StudentId" />
+    </Key>
+    <Property Name="StudentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmergencyName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmergencyNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmergencyRelation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsPaperWorkComplete" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Person" Relationship="Self.fk_PersonIdStudent" FromRole="Student" ToRole="Person" />
+    <NavigationProperty Name="StudentEvents" Relationship="Self.fk_StudentIdStudentEvent" FromRole="Student" ToRole="StudentEvent" />
+  </EntityType>
+  <EntityType Name="StudentEvent">
+    <Key>
+      <PropertyRef Name="StudentEventId" />
+    </Key>
+    <Property Name="StudentEventId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RegistrationDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="EventId" Type="Int32" Nullable="false" />
+    <Property Name="StudentId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Event" Relationship="Self.fk_EventIdStudentEvent" FromRole="StudentEvent" ToRole="Event" />
+    <NavigationProperty Name="Student" Relationship="Self.fk_StudentIdStudentEvent" FromRole="StudentEvent" ToRole="Student" />
+  </EntityType>
+  <Association Name="fk_CourseIdEvent">
+    <End Role="Course" Type="Self.Course" Multiplicity="1" />
+    <End Role="Event" Type="Self.Event" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Course">
+        <PropertyRef Name="CourseId" />
+      </Principal>
+      <Dependent Role="Event">
+        <PropertyRef Name="CourseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_CreatedByEvent">
+    <End Role="Person" Type="Self.Person" Multiplicity="1" />
+    <End Role="Event" Type="Self.Event" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="Event">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_EventIdEventInstructor">
+    <End Role="Event" Type="Self.Event" Multiplicity="1" />
+    <End Role="EventInstructor" Type="Self.EventInstructor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Event">
+        <PropertyRef Name="EventId" />
+      </Principal>
+      <Dependent Role="EventInstructor">
+        <PropertyRef Name="EventId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_EventIdStudentEvent">
+    <End Role="Event" Type="Self.Event" Multiplicity="1" />
+    <End Role="StudentEvent" Type="Self.StudentEvent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Event">
+        <PropertyRef Name="EventId" />
+      </Principal>
+      <Dependent Role="StudentEvent">
+        <PropertyRef Name="EventId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_EventTypeIdEvent">
+    <End Role="EventType" Type="Self.EventType" Multiplicity="1" />
+    <End Role="Event" Type="Self.Event" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EventType">
+        <PropertyRef Name="EventTypeId" />
+      </Principal>
+      <Dependent Role="Event">
+        <PropertyRef Name="EventTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_UpdatedByEvent">
+    <End Role="Person" Type="Self.Person" Multiplicity="0..1" />
+    <End Role="Event" Type="Self.Event" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="Event">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_InstructorIdEventInstructor">
+    <End Role="Instructor" Type="Self.Instructor" Multiplicity="1" />
+    <End Role="EventInstructor" Type="Self.EventInstructor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Instructor">
+        <PropertyRef Name="InstructorId" />
+      </Principal>
+      <Dependent Role="EventInstructor">
+        <PropertyRef Name="InstructorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_InstructorIdExtraWork">
+    <End Role="Instructor" Type="Self.Instructor" Multiplicity="1" />
+    <End Role="ExtraWork" Type="Self.ExtraWork" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Instructor">
+        <PropertyRef Name="InstructorId" />
+      </Principal>
+      <Dependent Role="ExtraWork">
+        <PropertyRef Name="InstructorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_PersonIdInstructor">
+    <End Role="Person" Type="Self.Person" Multiplicity="1" />
+    <End Role="Instructor" Type="Self.Instructor" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="Instructor">
+        <PropertyRef Name="InstructorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_PersonIdStudent">
+    <End Role="Person" Type="Self.Person" Multiplicity="1" />
+    <End Role="Student" Type="Self.Student" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="StudentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_StudentIdStudentEvent">
+    <End Role="Student" Type="Self.Student" Multiplicity="1" />
+    <End Role="StudentEvent" Type="Self.StudentEvent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="StudentId" />
+      </Principal>
+      <Dependent Role="StudentEvent">
+        <PropertyRef Name="StudentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="InstructorAcademics">
+    <End Role="Academics" Type="Self.Academic" Multiplicity="*" />
+    <End Role="Instructor" Type="Self.Instructor" Multiplicity="*" />
+  </Association>
+  <Association Name="InstructorCourse">
+    <End Role="Course" Type="Self.Course" Multiplicity="*" />
+    <End Role="Instructor" Type="Self.Instructor" Multiplicity="*" />
+  </Association>
+  <Association Name="InstructorSkill">
+    <End Role="Instructor" Type="Self.Instructor" Multiplicity="*" />
+    <End Role="SkillSet" Type="Self.SkillSet" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="DBCSEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Academics" EntityType="Self.Academic" />
+    <EntitySet Name="Courses" EntityType="Self.Course" />
+    <EntitySet Name="Events" EntityType="Self.Event" />
+    <EntitySet Name="EventInstructors" EntityType="Self.EventInstructor" />
+    <EntitySet Name="EventTypes" EntityType="Self.EventType" />
+    <EntitySet Name="ExtraWorks" EntityType="Self.ExtraWork" />
+    <EntitySet Name="Instructors" EntityType="Self.Instructor" />
+    <EntitySet Name="People" EntityType="Self.Person" />
+    <EntitySet Name="SkillSets" EntityType="Self.SkillSet" />
+    <EntitySet Name="Students" EntityType="Self.Student" />
+    <EntitySet Name="StudentEvents" EntityType="Self.StudentEvent" />
+    <AssociationSet Name="fk_CourseIdEvent" Association="Self.fk_CourseIdEvent">
+      <End Role="Course" EntitySet="Courses" />
+      <End Role="Event" EntitySet="Events" />
+    </AssociationSet>
+    <AssociationSet Name="fk_CreatedByEvent" Association="Self.fk_CreatedByEvent">
+      <End Role="Person" EntitySet="People" />
+      <End Role="Event" EntitySet="Events" />
+    </AssociationSet>
+    <AssociationSet Name="fk_EventIdEventInstructor" Association="Self.fk_EventIdEventInstructor">
+      <End Role="Event" EntitySet="Events" />
+      <End Role="EventInstructor" EntitySet="EventInstructors" />
+    </AssociationSet>
+    <AssociationSet Name="fk_EventIdStudentEvent" Association="Self.fk_EventIdStudentEvent">
+      <End Role="Event" EntitySet="Events" />
+      <End Role="StudentEvent" EntitySet="StudentEvents" />
+    </AssociationSet>
+    <AssociationSet Name="fk_EventTypeIdEvent" Association="Self.fk_EventTypeIdEvent">
+      <End Role="EventType" EntitySet="EventTypes" />
+      <End Role="Event" EntitySet="Events" />
+    </AssociationSet>
+    <AssociationSet Name="fk_UpdatedByEvent" Association="Self.fk_UpdatedByEvent">
+      <End Role="Person" EntitySet="People" />
+      <End Role="Event" EntitySet="Events" />
+    </AssociationSet>
+    <AssociationSet Name="fk_InstructorIdEventInstructor" Association="Self.fk_InstructorIdEventInstructor">
+      <End Role="Instructor" EntitySet="Instructors" />
+      <End Role="EventInstructor" EntitySet="EventInstructors" />
+    </AssociationSet>
+    <AssociationSet Name="fk_InstructorIdExtraWork" Association="Self.fk_InstructorIdExtraWork">
+      <End Role="Instructor" EntitySet="Instructors" />
+      <End Role="ExtraWork" EntitySet="ExtraWorks" />
+    </AssociationSet>
+    <AssociationSet Name="fk_PersonIdInstructor" Association="Self.fk_PersonIdInstructor">
+      <End Role="Person" EntitySet="People" />
+      <End Role="Instructor" EntitySet="Instructors" />
+    </AssociationSet>
+    <AssociationSet Name="fk_PersonIdStudent" Association="Self.fk_PersonIdStudent">
+      <End Role="Person" EntitySet="People" />
+      <End Role="Student" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="fk_StudentIdStudentEvent" Association="Self.fk_StudentIdStudentEvent">
+      <End Role="Student" EntitySet="Students" />
+      <End Role="StudentEvent" EntitySet="StudentEvents" />
+    </AssociationSet>
+    <AssociationSet Name="InstructorAcademics" Association="Self.InstructorAcademics">
+      <End Role="Academics" EntitySet="Academics" />
+      <End Role="Instructor" EntitySet="Instructors" />
+    </AssociationSet>
+    <AssociationSet Name="InstructorCourse" Association="Self.InstructorCourse">
+      <End Role="Course" EntitySet="Courses" />
+      <End Role="Instructor" EntitySet="Instructors" />
+    </AssociationSet>
+    <AssociationSet Name="InstructorSkill" Association="Self.InstructorSkill">
+      <End Role="Instructor" EntitySet="Instructors" />
+      <End Role="SkillSet" EntitySet="SkillSets" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

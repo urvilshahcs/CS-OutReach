@@ -1,0 +1,92 @@
+C:\Users\Akash\Documents\GitHub\WPLCSOutreach\CSOutreach\DataOperations\obj\Debug\DataOperations.csprojResolveAssemblyReference.cache
+D:\Amey Kelkar\Dropbox\IT Docs\Github\WPLCSOutreach\WPLCSOutreach\CSOutreach\DataOperations\obj\Debug\DataOperations.csprojResolveAssemblyReference.cache
+D:\Amey Kelkar\Dropbox\IT Docs\Github\WPLCSOutreach\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\DataOperations.dll
+D:\Amey Kelkar\Dropbox\IT Docs\Github\WPLCSOutreach\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\DataOperations.pdb
+D:\Amey Kelkar\Dropbox\IT Docs\Github\WPLCSOutreach\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\Amey Kelkar\Dropbox\IT Docs\Github\WPLCSOutreach\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\Amey Kelkar\Dropbox\IT Docs\Github\WPLCSOutreach\WPLCSOutreach\CSOutreach\DataOperations\obj\Debug\DataOperations.dll
+D:\Amey Kelkar\Dropbox\IT Docs\Github\WPLCSOutreach\WPLCSOutreach\CSOutreach\DataOperations\obj\Debug\DataOperations.pdb
+D:\Amey Kelkar\Dropbox\IT Docs\Github\WPLCSOutreach\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\DataOperations.dll.config
+D:\Amey Kelkar\Dropbox\IT Docs\Github\WPLCSOutreach\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\EntityFramework.dll
+D:\Amey Kelkar\Dropbox\IT Docs\Github\WPLCSOutreach\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\EntityFramework.xml
+E:\Git Hub Projects\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\DataOperations.dll.config
+E:\Git Hub Projects\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\DataOperations.dll
+E:\Git Hub Projects\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\DataOperations.pdb
+E:\Git Hub Projects\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\EntityFramework.dll
+E:\Git Hub Projects\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+E:\Git Hub Projects\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+E:\Git Hub Projects\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\EntityFramework.xml
+E:\Git Hub Projects\WPLCSOutreach\CSOutreach\DataOperations\obj\Debug\DataOperations.dll
+E:\Git Hub Projects\WPLCSOutreach\CSOutreach\DataOperations\obj\Debug\DataOperations.pdb
+C:\Users\Jonny\Documents\GitHub\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\DataOperations.dll.config
+C:\Users\Jonny\Documents\GitHub\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\DataOperations.dll
+C:\Users\Jonny\Documents\GitHub\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\DataOperations.pdb
+C:\Users\Jonny\Documents\GitHub\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\EntityFramework.dll
+C:\Users\Jonny\Documents\GitHub\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Users\Jonny\Documents\GitHub\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Users\Jonny\Documents\GitHub\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Users\Jonny\Documents\GitHub\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Jonny\Documents\GitHub\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+C:\Users\Jonny\Documents\GitHub\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\EntityFramework.xml
+C:\Users\Jonny\Documents\GitHub\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\Microsoft.Practices.Unity.pdb
+C:\Users\Jonny\Documents\GitHub\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\Jonny\Documents\GitHub\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\Microsoft.Practices.Unity.Interception.pdb
+C:\Users\Jonny\Documents\GitHub\WPLCSOutreach\CSOutreach\DataOperations\obj\Debug\DataOperations.csprojResolveAssemblyReference.cache
+C:\Users\Jonny\Documents\GitHub\WPLCSOutreach\CSOutreach\DataOperations\obj\Debug\DataOperations.dll
+C:\Users\Jonny\Documents\GitHub\WPLCSOutreach\CSOutreach\DataOperations\obj\Debug\DataOperations.pdb
+C:\Users\Acer\Documents\GitHub\Wpl-Project\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\DataOperations.dll.config
+C:\Users\Acer\Documents\GitHub\Wpl-Project\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\DataOperations.dll
+C:\Users\Acer\Documents\GitHub\Wpl-Project\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\DataOperations.pdb
+C:\Users\Acer\Documents\GitHub\Wpl-Project\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\EntityFramework.dll
+C:\Users\Acer\Documents\GitHub\Wpl-Project\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Users\Acer\Documents\GitHub\Wpl-Project\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Users\Acer\Documents\GitHub\Wpl-Project\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Users\Acer\Documents\GitHub\Wpl-Project\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Acer\Documents\GitHub\Wpl-Project\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+C:\Users\Acer\Documents\GitHub\Wpl-Project\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\EntityFramework.xml
+C:\Users\Acer\Documents\GitHub\Wpl-Project\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\Microsoft.Practices.Unity.pdb
+C:\Users\Acer\Documents\GitHub\Wpl-Project\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\Acer\Documents\GitHub\Wpl-Project\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\Microsoft.Practices.Unity.Interception.pdb
+C:\Users\Acer\Documents\GitHub\Wpl-Project\WPLCSOutreach\CSOutreach\DataOperations\obj\Debug\DataOperations.csprojResolveAssemblyReference.cache
+C:\Users\Acer\Documents\GitHub\Wpl-Project\WPLCSOutreach\CSOutreach\DataOperations\obj\Debug\DataOperations.dll
+C:\Users\Acer\Documents\GitHub\Wpl-Project\WPLCSOutreach\CSOutreach\DataOperations\obj\Debug\DataOperations.pdb
+C:\Users\Acer\Documents\GitHub\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\DataOperations.dll.config
+C:\Users\Acer\Documents\GitHub\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\DataOperations.dll
+C:\Users\Acer\Documents\GitHub\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\DataOperations.pdb
+C:\Users\Acer\Documents\GitHub\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\EntityFramework.dll
+C:\Users\Acer\Documents\GitHub\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Users\Acer\Documents\GitHub\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Users\Acer\Documents\GitHub\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Users\Acer\Documents\GitHub\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Acer\Documents\GitHub\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+C:\Users\Acer\Documents\GitHub\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\EntityFramework.xml
+C:\Users\Acer\Documents\GitHub\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\Microsoft.Practices.Unity.pdb
+C:\Users\Acer\Documents\GitHub\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\Acer\Documents\GitHub\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\Microsoft.Practices.Unity.Interception.pdb
+C:\Users\Acer\Documents\GitHub\WPLCSOutreach\CSOutreach\DataOperations\obj\Debug\DataOperations.csprojResolveAssemblyReference.cache
+C:\Users\Acer\Documents\GitHub\WPLCSOutreach\CSOutreach\DataOperations\obj\Debug\DataOperations.dll
+C:\Users\Acer\Documents\GitHub\WPLCSOutreach\CSOutreach\DataOperations\obj\Debug\DataOperations.pdb
+C:\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\DataOperations.dll.config
+C:\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\DataOperations.dll
+C:\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\DataOperations.pdb
+C:\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\EntityFramework.dll
+C:\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\Microsoft.Practices.Unity.dll
+C:\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+C:\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\EntityFramework.xml
+C:\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\Microsoft.Practices.Unity.pdb
+C:\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\Microsoft.Practices.Unity.Interception.pdb
+C:\WPLCSOutreach\CSOutreach\DataOperations\obj\Debug\DataOperations.dll
+C:\WPLCSOutreach\CSOutreach\DataOperations\obj\Debug\DataOperations.pdb
+C:\Users\Sumax\Documents\GitHub\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\DataOperations.dll.config
+C:\Users\Sumax\Documents\GitHub\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\DataOperations.dll
+C:\Users\Sumax\Documents\GitHub\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\DataOperations.pdb
+C:\Users\Sumax\Documents\GitHub\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\EntityFramework.dll
+C:\Users\Sumax\Documents\GitHub\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Users\Sumax\Documents\GitHub\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Users\Sumax\Documents\GitHub\WPLCSOutreach\CSOutreach\DataOperations\bin\Debug\EntityFramework.xml
+C:\Users\Sumax\Documents\GitHub\WPLCSOutreach\CSOutreach\DataOperations\obj\Debug\DataOperations.dll
+C:\Users\Sumax\Documents\GitHub\WPLCSOutreach\CSOutreach\DataOperations\obj\Debug\DataOperations.pdb
